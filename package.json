@@ -11,7 +11,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "coverage": "npm run test -- --coverage",
+    "coverage": "npm run test -- --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -31,5 +31,18 @@
   },
   "devDependencies": {
     "react-test-renderer": "^16.12.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": 80
+      }
+    }
   }
 }
